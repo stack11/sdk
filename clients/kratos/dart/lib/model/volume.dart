@@ -114,7 +114,7 @@ class Volume {
         scope: json[r'Scope'],
         status: json[r'Status'] == null
           ? null
-          : Object.mapFromJson(json[r'Status']),
+          : json[r'Status'] as Map,
         usageData: VolumeUsageData.fromJson(json[r'UsageData']),
     );
 

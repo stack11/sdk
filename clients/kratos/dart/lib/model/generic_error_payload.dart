@@ -95,7 +95,7 @@ class GenericErrorPayload {
         debug: json[r'debug'],
         details: json[r'details'] == null
           ? null
-          : Object.mapFromJson(json[r'details']),
+          : json[r'details'] as Map,
         message: json[r'message'],
         reason: json[r'reason'],
         request: json[r'request'],
